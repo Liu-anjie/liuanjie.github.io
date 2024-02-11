@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关于我们</title>
+  <link rel="icon"href="picture/07.PNG"type=image/x-icon">
+  <style>
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    /* 响应式导航栏样式 */
+   .navbar {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		.navbar a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+    /* 响应式样式 */
+    @media (max-width: 600px) {
+      header {
+        padding: 5px;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      .prev, .next {
+        font-size: 14px;
+      }
+      .product {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About us</h1>
+    <div class="navbar">
+     <a href="index.html">首页</a></li>
+          <a href="about.html">关于我们</a></li>
+          <a href="other.html">其他</a></li>
+          <a href="contact.html">联系我们</a></li>
+    </div>
+  </header>
+  <main>
+    <section></section>
+    <section> </section>
+  </main>
+  <footer>
+    <h1>关于我们</h1>
+    <p>这是一个充满创意的网站，网站将会持续更新，你可以在这个网站上查阅一些信息，比如，我叫刘安杰和绝世帅哥——晨叔韦😊。不过目前本网站正在完善谢谢。其实我也感觉这没什么好介绍的啦，去探索其他功能吧！</p>
+    <p>&copy; 2024 刘安杰网</p>
+</footer>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+</body>
+</html>
