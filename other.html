@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>其他</title>
+  <link rel="icon"href="picture/07.PNG"type=image/x-icon">
+  <style>
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    /* 响应式导航栏样式 */
+   .navbar {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		.navbar a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+
+    /* 轮播图样式 */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    .mySlides {
+      display: none;
+    }
+    .mySlides img {
+      width: 100%;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .text {
+      color: #889;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+
+    /* 产品介绍样式 */
+    .product-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px 0;
+    }
+    .product {
+      text-align: center;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      max-width: 300px;
+    }
+    .product img {
+      max-width: 100%;
+    }
+    .product h3 {
+      margin-top: 10px;
+    }
+    .button {
+      display: block;
+      width: 100px;
+      margin: 10px auto;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      border-radius: 5px;
+    }
+
+    /* 响应式样式 */
+    @media (max-width: 600px) {
+      header {
+        padding: 5px;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      .prev, .next {
+        font-size: 14px;
+      }
+      .product {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>其他</h1>
+    <div class="navbar">
+     <a href="index.html">首页</a></li>
+          <a href="about.html">关于我们</a></li>
+          <a href="other.html">其他</a></li>
+          <a href="contact.html">联系我们</a></li>
+    </div>
+  </header>
+<ul>
+      <p>Hello,Shuwei ，This is some other.</p>
+      <h1><em><strong>文章</strong></em></h1>
+      <p>好像目前还真没有。
+      <p>
+  <h1><strong><em>面包😋</em></strong></h1>
+      <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="picture/08.jpg" style="width:100%">
+      <div class="text">经典吐司</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="picture/09.jpg" style="width:100%">
+      <div class="text">巧克力面包</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="picture/10.jpg" style="width:100%">
+      <div class="text">简陋版菠萝包</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+<br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <div>
+      <h1><strong><em>人物推荐</em></strong></h1>
+</ul>
+  <div class="product-container">
+    <div class="product">
+      <img src="picture/01.jpg" alt="Product 1" width="300" height="300">
+      <h3>Anjie</h3>
+      <p>这款趣味十足的套装会使你也像套装中的主角一样变成大聪明</p>
+      <a href="laj.html" class="button">查看详细</a>
+    </div>
+    <div class="product">
+      <img src="picture/02.jpg" alt="Product 2" width="300" height="300">
+      <h3>Shuwei</h3>
+      <p>这是一个帅哥主题的产品，它拥有帅气的面孔和动人的歌声，关键是这个是篮球精英限定款</p>
+      <a href="csw.html" class="button">查看详细</a>
+    </div>
+</div>
+  <main>
+    <section></section>
+    <section> </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 刘安杰网</p>
+  </footer>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+</body>
+</html>
